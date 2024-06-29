@@ -7,8 +7,11 @@ name:'Cart',
 initialState:[],
 reducers:{
     AddToCart:(state,action)=>{
+    const id=action.payload.id
+    if(!state.find((item) => item.id === id)){
     const newitem={...action.payload,qte:1}
-    state.push(newitem)
+    state.push(newitem)}
+
     
 
     },

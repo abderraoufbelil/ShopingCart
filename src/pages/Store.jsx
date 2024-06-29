@@ -16,10 +16,13 @@ const Store = () => {
   };
 
   return (
-    <div className="w-full h-full text-black flex  justify-center gap-8  flex-wrap ">
-      <button onClick={openclosecart} className="absolute top-0 ">
-        open
-      </button>
+    <div className="w-full h-full text-black flex  justify-center gap-8  flex-wrap py-4 ">
+      <img
+        src="/ShoppingCart11.svg"
+        onClick={openclosecart}
+        className="absolute top-0 h-[40px] w-[40px] cursor-pointer"
+      />
+
       {shoppingcartstate && <ShoppingCart open={openclosecart} />}
       {productlist.map((item, index) => (
         <ProductCard
